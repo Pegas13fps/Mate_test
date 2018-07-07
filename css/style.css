@@ -243,8 +243,6 @@ form {
     color: #fff;
   }
   video {
-      width: 500px;
-      height: 305px;
       border-radius: 6px;
       -webkit-border-radius: 6px;
       -moz-border-radius: 6px;
