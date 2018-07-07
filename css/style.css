@@ -180,7 +180,7 @@ time, mark, audio, video {
     justify-content: space-around;
     align-items: center;
     background: #e3e3e3;
-    height: 430px;
+    padding: 60px 0;
 }
 .form-video h3 {
     font-family: 'Raleway-SemiBold';
@@ -272,14 +272,32 @@ form {
 .photos {
     padding: 30px 0 60px 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.photos img:hover {
-    transform: scale(1.5);
-    border: 1px solid #000;
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
+.photos a {
+    width: 50px;
+    height: 50px;
+}
+.photos a {
+    display: block; 
+    position: relative;
+    margin: 5px 5px 0 0;
+}
+.photos a:after {
+    content: '';
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(46, 204, 113,.5);  
+    opacity: 0;
+}
+.photos a:hover:before,
+.photos a:hover:after { 
+    opacity: 1; 
 }
 .social-box {
     display: flex;
@@ -339,3 +357,108 @@ nav a:hover {
     font-size: 22px;
     border-bottom: 1px solid #000;
 }
+@media (max-width: 1170px) {
+    .notify-text {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .hand-box {
+        display: none;
+    }
+    .box-items {
+        width: 30%;
+    }
+
+    .form-video {
+        flex-flow: column;
+        height: 100%;
+    }
+    .form-box {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    form {
+        margin-bottom: 20px;
+    }
+    .text-box p {
+        width: 90%;
+    }
+  }
+  @media (max-width: 750px) {
+      .technologies {
+          width: 80%;
+          justify-content: space-around;
+      }
+      .advantages {
+          flex-flow: column;
+          align-items: center;
+          padding: 30px 0;
+      }
+      .advantages h3 {
+          margin: 15px 0;
+      }
+      .box-items {
+          width: 90%;
+          padding: 10px 0;
+      }
+      form {
+          text-align: center;
+      }
+  }
+  @media (max-width: 560px) {
+      .form-video p {
+          width: 90%;
+      }
+      .form-video h3 {
+          text-align: center;
+      }
+      video {
+          width: 90%;
+      }
+      .social-box p {
+          width: 90%;
+          text-align: center;
+      }
+      nav {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          padding: 25px 10px;
+          margin: 30px 0 0 0;
+      }
+      nav a {
+          margin: 10px;
+          text-decoration: underline;
+      }
+      .form-box {
+          width: 90%;
+      }
+      form {
+          width: 320px;
+      }
+      .mail-box input {
+          width: 80%;
+      }
+      .mail-box button {
+        right: 26px;
+        width: 90px;
+    }
+    .header-content p {
+        width: 90%;
+        text-align: center;
+    }
+  }
+  @media (max-width: 320px) {
+      form {
+          width: 90%;
+      }
+      .mail-box input {
+          width: 100%;
+      }
+      .mail-box button {
+          width: 45%;
+          right: -12px;
+      }
+  }
